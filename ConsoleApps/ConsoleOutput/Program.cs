@@ -20,4 +20,10 @@ namespace ConsoleOutput
             return Math.Pow(x, y);
         }
     }
+    class Person
+    {
+        public string Name { set; get; }
+        public int Age { set; get; }
+
+    }
 }
