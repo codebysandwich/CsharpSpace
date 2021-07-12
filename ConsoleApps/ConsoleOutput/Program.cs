@@ -12,6 +12,10 @@ namespace ConsoleOutput
         {
             Console.WriteLine("hello world!");
             Console.WriteLine(Add(2, 3));
+            int x = 12;
+            int y = 13;
+            Swap(ref x, ref y);
+            Console.WriteLine("{0:}, {1:}", x, y);
             Console.ReadKey();
         }
 
@@ -19,11 +23,18 @@ namespace ConsoleOutput
         {
             return Math.Pow(x, y);
         }
+
+        static void Swap(ref int x, ref int y)
+        {
+            x = x ^ y;
+            y = x ^ y;
+            x = x ^ y;
+        }
     }
+
     class Person
     {
         public string Name { set; get; }
         public int Age { set; get; }
-
     }
 }
