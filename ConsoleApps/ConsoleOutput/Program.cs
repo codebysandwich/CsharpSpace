@@ -16,6 +16,11 @@ namespace ConsoleOutput
             int y = 13;
             Swap(ref x, ref y);
             Console.WriteLine("{0:}, {1:}", x, y);
+
+            Console.WriteLine("-------------------------------------");
+            int i = 4, j = 5;
+            int k;
+            Console.WriteLine(k=i);
             Console.ReadKey();
         }
 
@@ -37,4 +42,5 @@ namespace ConsoleOutput
         public string Name { set; get; }
         public int Age { set; get; }
     }
+
 }
