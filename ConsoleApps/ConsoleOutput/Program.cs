@@ -20,13 +20,14 @@ namespace ConsoleOutput
             Console.WriteLine("-------------------------------------");
             int i = 4, j = 5;
             int k;
-            Console.WriteLine(k=i);
+            Console.WriteLine(k = i);
             // 连续赋值
             j = k = 12;
             // 字符串内插
             Console.WriteLine($"连续赋值后：j={j}, k={k}");
             Console.WriteLine("-------------------------------------");
-            
+            StringFunc();
+
             Console.ReadKey();
         }
 
@@ -42,13 +43,20 @@ namespace ConsoleOutput
             x = x ^ y;
         }
 
+        #region 字符串练习
         /// <summary>
         /// 学习字符串相关的知识
         /// </summary>
         static void StringFunc()
         {
-            
+            string str = "abcd";
+            Console.WriteLine(Reverse(str));
         }
+        static string Reverse(string input)
+        {
+            return new string(input.Reverse().ToArray());
+        }
+        #endregion
     }
 
 }
