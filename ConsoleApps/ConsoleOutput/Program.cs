@@ -11,7 +11,6 @@ namespace ConsoleOutput
         static void Main(string[] args)
         {
             Console.WriteLine("hello world!");
-            Console.WriteLine(Add(2, 3));
             int x = 12;
             int y = 13;
             Swap(ref x, ref y);
@@ -19,6 +18,7 @@ namespace ConsoleOutput
 
             Console.WriteLine("-------------------------------------");
             int i = 4, j = 5;
+            // 声明或定义了一个整形对象
             int k;
             Console.WriteLine(k = i);
             // 连续赋值
@@ -29,11 +29,6 @@ namespace ConsoleOutput
             StringFunc();
 
             Console.ReadKey();
-        }
-
-        static double Add(double x, double y)
-        {
-            return Math.Pow(x, y);
         }
 
         static void Swap(ref int x, ref int y)
@@ -51,6 +46,9 @@ namespace ConsoleOutput
         {
             string str = "abcd";
             Console.WriteLine(Reverse(str));
+            // 字符串赋值为空字符串
+            str = "";
+            Console.WriteLine(str.Equals(string.Empty));
         }
         static string Reverse(string input)
         {
@@ -58,5 +56,5 @@ namespace ConsoleOutput
         }
         #endregion
     }
-
+ 
 }
