@@ -26,10 +26,16 @@ namespace ConsoleOutput
             // 字符串内插
             Console.WriteLine($"连续赋值后：j={j}, k={k}");
             Console.WriteLine("-------------------------------------");
+
+            Console.WriteLine("------------------数值型数据练习-------------------");
+            NumFunc();
+
+            Console.WriteLine("------------------字符串练习-------------------");
             StringFunc();
 
             Console.ReadKey();
         }
+
 
         static void Swap(ref int x, ref int y)
         {
@@ -37,6 +43,20 @@ namespace ConsoleOutput
             y = x ^ y;
             x = x ^ y;
         }
+
+        #region 数值型数据练习
+        static void NumFunc()
+        {
+            // 浮点数据精度损失问题
+            double a = 3000.2, b = 3000;
+            double c = a - b;
+            Console.WriteLine(c);
+            // 使用decimal金融数据类型解决这个问题
+            decimal c1 = 3000.2M, c2 = 3000M;
+            Console.WriteLine(c1-c2);
+        }
+
+        #endregion
 
         #region 字符串练习
         /// <summary>
@@ -49,6 +69,13 @@ namespace ConsoleOutput
             // 字符串赋值为空字符串
             str = "";
             Console.WriteLine(str.Equals(string.Empty));
+
+            char[] chrs = new char[] { 'a', 'b', 'd' };
+            str = new string(chrs);
+            foreach (byte b in Encoding.UTF8.GetBytes(str))
+            {
+                Console.WriteLine(b);
+            }
         }
         static string Reverse(string input)
         {
@@ -56,5 +83,5 @@ namespace ConsoleOutput
         }
         #endregion
     }
- 
+
 }
