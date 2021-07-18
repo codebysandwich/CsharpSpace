@@ -81,6 +81,11 @@ namespace ConsoleOutput
             {
                 Console.WriteLine(b);
             }
+            // 演示占位符的使用
+            string firstName = "leo", lastName = "sandwich";
+            Console.WriteLine("你好，{1} {0}", firstName, lastName);
+            // 演示变量占位符使用
+            Console.WriteLine($"你好{firstName} {lastName}");
         }
         static string Reverse(string input)
         {
