@@ -20,6 +20,7 @@ namespace ConsoleOutput
             int i = 4, j = 5;
             // 声明或定义了一个整形对象
             int k;
+            // 赋值会返回一个值，可以用于连续赋值
             Console.WriteLine(k = i);
             // 连续赋值
             j = k = 12;
