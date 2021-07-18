@@ -36,7 +36,11 @@ namespace ConsoleOutput
             Console.ReadKey();
         }
 
-
+        /// <summary>
+        /// 不引入临时变量，交换两个变量
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
         static void Swap(ref int x, ref int y)
         {
             x = x ^ y;
