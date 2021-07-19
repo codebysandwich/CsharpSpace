@@ -8,6 +8,10 @@ namespace ConsoleOutput
 {
     class Program
     {
+        /// <summary>
+        /// 主函数
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             Console.WriteLine("hello world!");
@@ -15,8 +19,8 @@ namespace ConsoleOutput
             int y = 13;
             Swap(ref x, ref y);
             Console.WriteLine("{0:}, {1:}", x, y);
+            EndOfPrint();
 
-            Console.WriteLine("-------------------------------------");
             int i = 4, j = 5;
             // 声明或定义了一个整形对象
             int k;
@@ -26,7 +30,7 @@ namespace ConsoleOutput
             j = k = 12;
             // 字符串内插
             Console.WriteLine($"连续赋值后：j={j}, k={k}");
-            Console.WriteLine("-------------------------------------");
+            EndOfPrint();
 
             Console.WriteLine("------------------数值型数据练习-------------------");
             NumFunc();
@@ -53,12 +57,39 @@ namespace ConsoleOutput
         static void NumFunc()
         {
             // 浮点数据精度损失问题
+            Console.WriteLine("浮点数损失精度问题");
             double a = 3000.2, b = 3000;
             double c = a - b;
             Console.WriteLine(c);
+            EndOfPrint();
             // 使用decimal金融数据类型解决这个问题
+            Console.WriteLine("引入decimal解决精度损失问题");
             decimal c1 = 3000.2M, c2 = 3000M;
             Console.WriteLine(c1-c2);
+            EndOfPrint();
+            // round_trip
+            Console.WriteLine("演示round_trip获取double准确转化字符串");
+            RoundTrip();
+            EndOfPrint();
+        }
+
+        /// <summary>
+        /// 更准确的得到double对应的字符串形式，使用"{:R}"
+        /// </summary>
+        static void RoundTrip()
+        {
+            const double number = 1.618033988749895;
+            Console.WriteLine(number);
+            double result;
+            string text;
+
+            text = $"{number}";
+            result = double.Parse(text);
+            Console.WriteLine($"{result == number}: result == number");
+
+            text = $"{number:R}";
+            result = double.Parse(text);
+            Console.WriteLine($"{result == number}: result == number");
         }
 
         #endregion
@@ -70,28 +101,61 @@ namespace ConsoleOutput
         static void StringFunc()
         {
             string str = "abcd";
+            Console.WriteLine("反转字符串{0}", str);
             Console.WriteLine(Reverse(str));
+            EndOfPrint();
+
             // 字符串赋值为空字符串
+            Console.WriteLine("string.Empty == \"\"");
             str = "";
             Console.WriteLine(str.Equals(string.Empty));
+            EndOfPrint();
 
+            Console.WriteLine("演示字符串 abd 的编码");
             char[] chrs = new char[] { 'a', 'b', 'd' };
             str = new string(chrs);
             foreach (byte b in Encoding.UTF8.GetBytes(str))
             {
                 Console.WriteLine(b);
             }
+            EndOfPrint();
+
             // 演示占位符的使用
+            Console.WriteLine("解释占位符格式化");
             string firstName = "leo", lastName = "sandwich";
             Console.WriteLine("你好，{1} {0}", firstName, lastName);
             // 演示变量占位符使用
             Console.WriteLine($"你好{firstName} {lastName}");
+            EndOfPrint();
+
+            Console.WriteLine("加法强制重载了+号");
+            Console.WriteLine(10+"5");
+            Console.WriteLine(10.62+"5");
+            EndOfPrint();
+
+            Console.WriteLine("十六进制格式化字符串");
+            Console.WriteLine("0x{0:X}", 42);
+            EndOfPrint();
         }
+        
+        /// <summary>
+        /// 反转字符串
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         static string Reverse(string input)
         {
             return new string(input.Reverse().ToArray());
         }
         #endregion
+
+        /// <summary>
+        /// 格式化输出演示结果
+        /// </summary>
+        static void EndOfPrint()
+        {
+            Console.WriteLine("==============================");
+        }
     }
 
 }
