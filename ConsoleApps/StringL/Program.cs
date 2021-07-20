@@ -9,7 +9,11 @@ namespace StringL
     {
         static void Main(string[] args)
         {
+            // 字符串加法
+            string s1 = "hello", s2 = "world";
 
+            Console.WriteLine(s1+s2);
+            Console.ReadKey();
         }
     }
 }
