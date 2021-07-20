@@ -16,6 +16,7 @@ namespace HeyYou
             lastName = Console.ReadLine();
 
             Console.WriteLine($"hey {firstName} {lastName}");
+            Console.ReadKey();
         }
     }
 }
