@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-/// <summary>
-/// 学习字符串相关知识
-/// </summary>
 namespace StringL
 {
     class Program
@@ -12,7 +13,7 @@ namespace StringL
             // 字符串加法
             Console.WriteLine("演示string重载加号");
             string s1 = "hello", s2 = "world";
-            Console.WriteLine(s1+s2);
+            Console.WriteLine(s1 + s2);
             EndOfPrint();
 
             Console.ReadKey();
