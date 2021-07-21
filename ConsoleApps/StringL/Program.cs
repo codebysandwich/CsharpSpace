@@ -16,9 +16,32 @@ namespace StringL
             Console.WriteLine(s1 + s2);
             EndOfPrint();
 
+            // $和@前缀
+            string firstName = "leo", lastName = "sandwich";
+            Console.WriteLine($@"hello, 
+            {firstName} {lastName}");
+            // 对比观察 ${}会打断换行
+            Console.WriteLine($@"hello, {
+                firstName} {lastName}");
+
+            // $等价实现 String.Format
+            object[] param  = new object[] { firstName, lastName };
+            //Console.WriteLine("hello, {0} {1}", param);
+            // 也等价于以下写法
+            Console.WriteLine(string.Format("hello, {0} {1}", param));
+            EndOfPrint();
+
+            // 比较两个字符串，返回相对位置, 0 if equals
+            int res = string.Compare("abc", "ABC", true);
+            Console.WriteLine(res);
+            EndOfPrint();
+
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// 格式打印的结尾
+        /// </summary>
         static void EndOfPrint()
         {
             Console.WriteLine("=====================================");
