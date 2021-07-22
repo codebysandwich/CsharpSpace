@@ -36,6 +36,15 @@ namespace StringL
             Console.WriteLine(res);
             EndOfPrint();
 
+            // @原生字符串演示
+            Console.WriteLine("演示@原生字符串的作用");
+            Console.WriteLine(@"\n\t");
+            EndOfPrint();
+
+            // 不同平台之间换行符差异解决办法
+            Console.Write($"使用系统换行符{System.Environment.NewLine}_l");
+            EndOfPrint();
+
             Console.ReadKey();
         }
 
