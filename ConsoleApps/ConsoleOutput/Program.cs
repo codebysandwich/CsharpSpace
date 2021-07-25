@@ -32,6 +32,20 @@ namespace ConsoleOutput
             Console.WriteLine($"连续赋值后：j={j}, k={k}");
             EndOfPrint();
 
+            Console.WriteLine("使用数据技巧交换两个int");
+            i = 22;
+            j = 32;
+            Swap_int(ref i, ref j);
+            Console.WriteLine($@"交换后i={i}, j={j}");
+            EndOfPrint();
+
+            // 展示隐式转换
+            Console.WriteLine(10 / 3);
+            Console.WriteLine(10 / 3.0);
+            i = 10;
+            double d = i;
+            Console.WriteLine(d);
+
             Console.WriteLine("------------------数值型数据练习-------------------");
             NumFunc();
 
@@ -53,6 +67,16 @@ namespace ConsoleOutput
             x = x ^ y;
         }
 
+        /// <summary>
+        /// 不使用临时变量，交换两个int类型的数据
+        /// </summary>
+        static void Swap_int(ref int x, ref int y)
+        {
+            x = x + y;
+            y = x - y;
+            x = x - y;
+        }
+
         #region 数值型数据练习
         static void NumFunc()
         {
@@ -65,7 +89,7 @@ namespace ConsoleOutput
             // 使用decimal金融数据类型解决这个问题
             Console.WriteLine("引入decimal解决精度损失问题");
             decimal c1 = 3000.2M, c2 = 3000M;
-            Console.WriteLine(c1-c2);
+            Console.WriteLine(c1 - c2);
             EndOfPrint();
             // round_trip
             Console.WriteLine("演示round_trip获取double准确转化字符串");
@@ -129,15 +153,15 @@ namespace ConsoleOutput
             EndOfPrint();
 
             Console.WriteLine("加法强制重载了+号");
-            Console.WriteLine(10+"5");
-            Console.WriteLine(10.62+"5");
+            Console.WriteLine(10 + "5");
+            Console.WriteLine(10.62 + "5");
             EndOfPrint();
 
             Console.WriteLine("十六进制格式化字符串");
             Console.WriteLine("0x{0:X}", 42);
             EndOfPrint();
         }
-        
+
         /// <summary>
         /// 反转字符串
         /// </summary>
