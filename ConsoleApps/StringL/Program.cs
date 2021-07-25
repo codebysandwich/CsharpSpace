@@ -37,7 +37,12 @@ namespace StringL
             EndOfPrint();
 
             // @原生字符串演示
+            /*
+             * 除了原生字符串还可以起到保留字符串原格式的作用
+             */
             Console.WriteLine("演示@原生字符串的作用");
+            // \b 退格键放在字符串两边没有效果
+            Console.WriteLine("hello\b, world!\b");
             Console.WriteLine(@"\n\t");
             EndOfPrint();
 
@@ -48,6 +53,7 @@ namespace StringL
             Console.ReadKey();
         }
 
+        #region 格式化输出
         /// <summary>
         /// 格式打印的结尾
         /// </summary>
@@ -55,5 +61,6 @@ namespace StringL
         {
             Console.WriteLine("=====================================");
         }
+        #endregion
     }
 }
