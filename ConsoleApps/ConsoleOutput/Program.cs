@@ -95,6 +95,19 @@ namespace ConsoleOutput
             Console.WriteLine("演示round_trip获取double准确转化字符串");
             RoundTrip();
             EndOfPrint();
+
+            Console.WriteLine("演示值类型地址关系");
+            int x1, x2;
+            x1 = 12;
+            x2 = x1;
+            Console.WriteLine($"x1{GetAddress(ref x1)}");
+            unsafe
+            {
+                int* p = &x1;
+                Console.WriteLine("x1 {0:X}", (uint)p);
+            }
+            Console.WriteLine($"x2{GetAddress(ref x2)}");
+            EndOfPrint();
         }
 
         /// <summary>
@@ -104,6 +117,9 @@ namespace ConsoleOutput
         {
             const double number = 1.618033988749895;
             Console.WriteLine(number);
+            // double无法精确表示
+            Console.WriteLine("{0:R}", number);
+            //使用一下转换解释
             double result;
             string text;
 
@@ -179,6 +195,17 @@ namespace ConsoleOutput
         static void EndOfPrint()
         {
             Console.WriteLine("==============================");
+        }
+
+        static string GetAddress(ref int x)
+        {
+            unsafe
+            {
+                fixed (int* p = &x)
+                {
+                    return string.Format("值{0}, 地址0x{1:X}", *p, (uint)p);
+                }
+            }
         }
     }
 
