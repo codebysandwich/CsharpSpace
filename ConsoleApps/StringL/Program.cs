@@ -45,10 +45,18 @@ namespace StringL
             Console.WriteLine("hello\b, world!\b");
             Console.WriteLine(@"\n\t");
             EndOfPrint();
-
+           
             // 不同平台之间换行符差异解决办法
             Console.Write($"使用系统换行符{System.Environment.NewLine}_l");
             EndOfPrint();
+
+            Console.WriteLine("使用Convert转换字符串->整数类型");
+            string str = "123";
+            Console.WriteLine(Convert.ToInt32(str));
+            EndOfPrint();
+
+            Console.WriteLine("{0, 30:.00}", 10/3.0);
+            Console.WriteLine("".PadLeft(3, '='));
 
             Console.ReadKey();
         }
