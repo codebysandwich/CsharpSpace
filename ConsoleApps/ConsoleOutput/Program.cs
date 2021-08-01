@@ -197,6 +197,11 @@ namespace ConsoleOutput
             Console.WriteLine("==============================");
         }
 
+        /// <summary>
+        /// 获取int类型地址，演示值类型含义
+        /// </summary>
+        /// <param name="x"></param>
+        /// <returns></returns>
         static string GetAddress(ref int x)
         {
             unsafe
