@@ -23,6 +23,10 @@ namespace XOR
             b = true;
             Console.WriteLine(XOR(a, b));
 
+            Console.Write("输入需要判断闰年的年份:");
+            int year = int.Parse(Console.ReadLine());
+            Console.WriteLine(IsLeapYear(year));
+
             Console.ReadKey();
         }
 
@@ -35,6 +39,20 @@ namespace XOR
         static bool XOR(bool x, bool y)
         {
             return (!(x && y)) && (x || y);
+        }
+
+        /// <summary>
+        /// 判断年份是否是闰年
+        /// </summary>
+        /// <param name="year">年份</param>
+        /// <returns></returns>
+        static bool IsLeapYear(int year)
+        {
+            /*
+             * 年份能被100整除
+             * 年份能被4整除但是不能被100整除
+             */
+            return year % 100 == 0 || (year % 4 == 0 && year % 100 != 0);
         }
     }
 }
