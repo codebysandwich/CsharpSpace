@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleOutput", "ConsoleOut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringL", "StringL\StringL.csproj", "{5D89FF29-3B83-48D2-8D17-30AF28487C17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlussD", "PlussD\PlussD.csproj", "{5FBCC7E8-33D9-4EAA-9018-785601A71C9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XOR", "XOR\XOR.csproj", "{61F46A36-1158-44DD-A3C9-BD704AF88C49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{5D89FF29-3B83-48D2-8D17-30AF28487C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D89FF29-3B83-48D2-8D17-30AF28487C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D89FF29-3B83-48D2-8D17-30AF28487C17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FBCC7E8-33D9-4EAA-9018-785601A71C9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FBCC7E8-33D9-4EAA-9018-785601A71C9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FBCC7E8-33D9-4EAA-9018-785601A71C9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FBCC7E8-33D9-4EAA-9018-785601A71C9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61F46A36-1158-44DD-A3C9-BD704AF88C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F46A36-1158-44DD-A3C9-BD704AF88C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F46A36-1158-44DD-A3C9-BD704AF88C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F46A36-1158-44DD-A3C9-BD704AF88C49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
