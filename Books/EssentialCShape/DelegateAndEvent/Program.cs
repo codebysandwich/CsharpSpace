@@ -23,7 +23,7 @@ namespace DelegateAndEvent
             };
             Say("sandwich");
 
-            // 通过事件实现
+            // 通过事件实现-注册事件
             SayEnv += Call;
             SayEnv("事件触发");
             
