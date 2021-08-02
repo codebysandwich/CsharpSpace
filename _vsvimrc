@@ -3,6 +3,8 @@ set relativenumber
 inoremap ,, <esc>
 nnoremap J 5j
 nnoremap K 5k
+vnoremap J 5j
+vnoremap K 5k
 nnoremap S :w<CR>
 nnoremap Q :q<CR>
 nnoremap <leader>r :vsc Debug.Start<CR>
