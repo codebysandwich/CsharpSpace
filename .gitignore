@@ -264,4 +264,4 @@ __pycache__/
 .vscode/
 
 # .DS_Store
-*/.DS_Store
+.DS_Store
