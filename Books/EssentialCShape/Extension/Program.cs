@@ -15,7 +15,7 @@ namespace Extension
         /// <summary>
         /// 为string类型拓展接口,计算单词个数
         /// </summary>
-        /// <param name="str"></param>
+        /// <param name="str">无变量意义</param>
         /// <returns></returns>
         public static int CountWord(this string str)
         {
