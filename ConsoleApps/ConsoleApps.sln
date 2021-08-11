@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtherDataStruct", "OtherDat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryCatch", "TryCatch\TryCatch.csproj", "{50C0EF01-19CA-4593-869E-7BB60CDB236B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case", "Case\Case.csproj", "{9C0DB532-DC59-4ACA-9651-F6456774B997}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{50C0EF01-19CA-4593-869E-7BB60CDB236B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50C0EF01-19CA-4593-869E-7BB60CDB236B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50C0EF01-19CA-4593-869E-7BB60CDB236B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C0DB532-DC59-4ACA-9651-F6456774B997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C0DB532-DC59-4ACA-9651-F6456774B997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C0DB532-DC59-4ACA-9651-F6456774B997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C0DB532-DC59-4ACA-9651-F6456774B997}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
