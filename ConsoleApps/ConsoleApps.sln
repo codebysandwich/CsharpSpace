@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryCatch", "TryCatch\TryCat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case", "Case\Case.csproj", "{9C0DB532-DC59-4ACA-9651-F6456774B997}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loop", "Loop\Loop.csproj", "{7CA44A29-1ACC-43C7-8156-E1B469B272DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{9C0DB532-DC59-4ACA-9651-F6456774B997}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C0DB532-DC59-4ACA-9651-F6456774B997}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C0DB532-DC59-4ACA-9651-F6456774B997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CA44A29-1ACC-43C7-8156-E1B469B272DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CA44A29-1ACC-43C7-8156-E1B469B272DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CA44A29-1ACC-43C7-8156-E1B469B272DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CA44A29-1ACC-43C7-8156-E1B469B272DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
