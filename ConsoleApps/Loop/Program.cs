@@ -102,9 +102,9 @@ namespace Loop
         static int SumPrime(int num)
         {
             int sum = 0;
-            for (int i = 2; i<=num; i++)
+            for (int i = 2; i <= num; i++)
             {
-                if(IsPrime(i))
+                if (IsPrime(i))
                     sum += i;
             }
             return sum;
@@ -149,7 +149,7 @@ namespace Loop
             {
                 for (int j = 1; j <= i; j++)
                 {
-                    Console.Write($"{j}x{i}={i*j}\t");
+                    Console.Write($"{j}x{i}={i * j}\t");
                 }
                 Console.WriteLine();
             }
