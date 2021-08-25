@@ -61,6 +61,17 @@ namespace OtherDataStruct
             p1.gender = Gender.Male;
 
             Console.WriteLine(p1.ToString());
+
+            HandleArray();
+
+            int[] nums = new int[] { 9, 3, 1, 0 };
+            Reverse(nums);
+            
+            foreach (var item in nums)
+            {
+                Console.WriteLine(item);
+            }
+
             Console.ReadKey();
         }
         /// <summary>
@@ -88,6 +99,46 @@ namespace OtherDataStruct
             {
                 Console.WriteLine(item);
             }
+        }
+        /// <summary>
+        /// 演示数组的基本操作
+        /// </summary>
+        static void HandleArray()
+        {
+            int[] nums = { 3, 2, 1, 9, 2, 7, 3 };
+            int min = nums[0], max = nums[0];
+            int sum = 0;
+            foreach (var num in nums)
+            {
+                sum += num;
+                min = num < min ? num : min;
+                max = num > max ? num : max;
+            }
+            Console.WriteLine(nums.Mean());
+            double mean = 1.0 * sum / nums.Length;
+            Console.WriteLine($"数组最大值:{max}, 最小值:{min}," +
+                $" 和:{sum}, 均值:{mean:F2}");
+        }
+        /// <summary>
+        /// 反转数组
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        static void Reverse(int[] nums)
+        {
+            for (int i = 0; i < nums.Length/2; i++)
+            {
+                int temp = nums[i];
+                nums[i] = nums[nums.Length - 1 - i];
+                nums[nums.Length - 1 - i] = temp;
+            }
+        }
+    }
+    static class IntsExtension
+    {
+        public static double Mean(this int[] nums)
+        {
+            return 1.0 * nums.Sum() / nums.Length;
         }
     }
 }
