@@ -59,8 +59,6 @@ namespace VauleTypeOrRefenceType
                 }
             }
 
-            int[] arrz = { 1, 4, 9 };
-
             Console.ReadKey();
         }
 
