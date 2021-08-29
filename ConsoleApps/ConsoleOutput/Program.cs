@@ -99,7 +99,9 @@ namespace ConsoleOutput
             Console.WriteLine("演示值类型地址关系");
             int x1, x2;
             x1 = 12;
+            Console.WriteLine($"x1{GetAddress(ref x1)}");
             x2 = x1;
+            x1 = 22;
             Console.WriteLine($"x1{GetAddress(ref x1)}");
             unsafe
             {
@@ -107,6 +109,7 @@ namespace ConsoleOutput
                 Console.WriteLine("x1 {0:X}", (uint)p);
             }
             Console.WriteLine($"x2{GetAddress(ref x2)}");
+            Swap(x1, x2);
             EndOfPrint();
         }
 
@@ -210,6 +213,18 @@ namespace ConsoleOutput
                 {
                     return string.Format("值{0}, 地址0x{1:X}", *p, (uint)p);
                 }
+            }
+        }
+
+        static void Swap(int a, int b)
+        {
+            unsafe
+            {
+                int* p = &a;
+                Console.WriteLine($"地址:0x{(uint)p:X}");
+                int* p1 = &b;
+                Console.WriteLine($"地址:0x{(uint)p1:X}");
+
             }
         }
     }

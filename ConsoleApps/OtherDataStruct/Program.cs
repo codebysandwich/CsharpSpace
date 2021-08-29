@@ -66,12 +66,11 @@ namespace OtherDataStruct
 
             int[] nums = new int[] { 9, 3, 1, 0 };
             Reverse(nums);
-            
+
             foreach (var item in nums)
             {
                 Console.WriteLine(item);
             }
-
             Console.ReadKey();
         }
         /// <summary>
@@ -86,6 +85,15 @@ namespace OtherDataStruct
             // 再简化
             int[] nums3 = { 4, 8, 0, 1 };
 
+            Console.WriteLine("测试数组的引用类型特性:");
+            int[] num4 = nums3;
+            num4[3] = 99;
+            foreach (var item in nums3)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("演示结束!");
+
             // 创建二维数组，多维数组的各维度尺寸必须一致
             string[,] strs2 = new string[,] { { "a", "b", "c" }, { "c", "d", "f" } };
 
@@ -99,6 +107,13 @@ namespace OtherDataStruct
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine("演示map");
+            var res1 = nums1.Select(x => x * x);
+            foreach (var item in res1)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("演示结束");
         }
         /// <summary>
         /// 演示数组的基本操作
