@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefAndOut", "RefAndOut\RefA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VauleTypeOrRefenceType", "VauleTypeOrRefenceType\VauleTypeOrRefenceType.csproj", "{8C2A8C4F-4674-4EA1-8FAB-34728A08B90A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Params", "Params\Params.csproj", "{F89B411C-B6B5-4DEF-9C7E-B4F71EB4DF83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverLoad", "OverLoad\OverLoad.csproj", "{F319FCC2-DBD7-455D-97C3-177077F07057}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{8C2A8C4F-4674-4EA1-8FAB-34728A08B90A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C2A8C4F-4674-4EA1-8FAB-34728A08B90A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C2A8C4F-4674-4EA1-8FAB-34728A08B90A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F89B411C-B6B5-4DEF-9C7E-B4F71EB4DF83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F89B411C-B6B5-4DEF-9C7E-B4F71EB4DF83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F89B411C-B6B5-4DEF-9C7E-B4F71EB4DF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F89B411C-B6B5-4DEF-9C7E-B4F71EB4DF83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F319FCC2-DBD7-455D-97C3-177077F07057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F319FCC2-DBD7-455D-97C3-177077F07057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F319FCC2-DBD7-455D-97C3-177077F07057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F319FCC2-DBD7-455D-97C3-177077F07057}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
