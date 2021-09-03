@@ -29,5 +29,25 @@ namespace Demo1
         {
             tb_status.Text = "OK";
         }
+
+        private void FinishCombox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //如果初始化时设置了selectedIndex，并文本框后生成则必须考虑这个问题
+            if (NoteText == null)
+            {
+                return;
+            }
+
+            //NoteText.Text = (string)((ComboBoxItem)FinishCombox.SelectedItem).Content;
+            ComboBox comboBox = (ComboBox)sender;
+            ComboBoxItem comboBoxItem = (ComboBoxItem)comboBox.SelectedItem;
+            NoteText.Text = comboBoxItem.Content.ToString();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            // 初始化完成同步信息
+            FinishCombox_SelectionChanged(FinishCombox, null);
+        }
     }
 }

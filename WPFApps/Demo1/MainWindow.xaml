@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Demo1"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="WPF Basic" Height="740" Width="400" WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize" Background="AliceBlue">
     <Border Padding="10">
@@ -76,7 +77,8 @@
             <TextBox Height="23" IsReadOnly="True" Background="#eeeeee" Padding="2"/>
 
             <TextBlock Text="Finish" Margin="0 5 0 0" />
-            <ComboBox SelectedIndex="0" Padding="2" Height="23">
+            <ComboBox x:Name="FinishCombox" SelectedIndex="0" Padding="2" Height="23"
+                      SelectionChanged="FinishCombox_SelectionChanged">
                 <ComboBoxItem Content="Painted"/>
                 <ComboBoxItem Content="Not Painted"/>
             </ComboBox>
@@ -90,11 +92,11 @@
             <TextBlock Text="Supplier Name" Margin="0 5 0 0" />
             <TextBox Height="23" Margin="0 5 0 0" Padding="2"/>
             <TextBlock Text="Supplier Code" Margin="0 5 0 0" />
-            <TextBox Height="23" Margin="0 5 0 0" Padding="2" />
+            <TextBox x:Name="CodeText" Height="23" Margin="0 5 0 0" Padding="2" />
 
             <TextBlock Text="Additional Information" FontWeight="Bold" Margin="0 5 0 0"/>
             <TextBlock Text="Note" Margin="0 5 0 0" />
-            <TextBox Height="23" Margin="0 5 0 0" Padding="2" />
+            <TextBox x:Name="NoteText" Height="23" Margin="0 5 0 0" Padding="2" />
 
         </StackPanel>
     </Border>
