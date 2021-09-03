@@ -24,5 +24,10 @@ namespace Demo1
         {
             InitializeComponent();
         }
+
+        private void Apply_Click(object sender, RoutedEventArgs e)
+        {
+            tb_status.Text = "OK";
+        }
     }
 }
