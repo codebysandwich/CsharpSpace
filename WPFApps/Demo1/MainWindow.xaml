@@ -18,7 +18,7 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <Button Name="Apply" Margin="0 0 10 0" Grid.Column="0" Content="Apply" Click="Apply_Click" />
-                <Button Grid.Column="1" Content="Reset" />
+                <Button Grid.Column="1" x:Name="RestButton" Click="RestButton_Click" Content="Reset" />
                 <Button Margin="10 0 0 0" Grid.Column="2" Content="Refresh" />
             </Grid>
 
@@ -55,26 +55,26 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <StackPanel Grid.Column="0" Margin="0 5 0 0">
-                    <CheckBox Content="Weld" />
-                    <CheckBox Content="Assembly" />
-                    <CheckBox Content="Plasma" />
-                    <CheckBox Content="laser" />
-                    <CheckBox Content="Purchase" />
+                    <CheckBox x:Name="WildCheckBox" Checked="CheckBox_Checked" Content="Weld" />
+                    <CheckBox x:Name="AssemblyCheckBox" Checked="CheckBox_Checked" Content="Assembly" />
+                    <CheckBox x:Name="PlasmaCheckBox" Checked="CheckBox_Checked" Content="Plasma" />
+                    <CheckBox x:Name="LaserCheckBox" Checked="CheckBox_Checked" Content="Laser" />
+                    <CheckBox x:Name="PurchaseCheckBox" Checked="CheckBox_Checked" Content="Purchase" />
                 </StackPanel>
                 <StackPanel Grid.Column="1" Margin="0 5 0 0">
-                    <CheckBox Content="Lathe" />
-                    <CheckBox Content="Drill" />
-                    <CheckBox Content="Fold" />
-                    <CheckBox Content="Row" />
-                    <CheckBox Content="Saw" />
+                    <CheckBox x:Name="LatheCheckBox" Checked="CheckBox_Checked" Content="Lathe" />
+                    <CheckBox x:Name="DrillCheckBox" Checked="CheckBox_Checked" Content="Drill" />
+                    <CheckBox x:Name="FoldCheckBox" Checked="CheckBox_Checked" Content="Fold" />
+                    <CheckBox x:Name="RowCheckBox" Checked="CheckBox_Checked" Content="Row" />
+                    <CheckBox x:Name="SawCheckBox" Checked="CheckBox_Checked" Content="Saw" />
                 </StackPanel>
             </Grid>
 
             <TextBlock Text="Length" Margin="0 5 0 0" />
-            <TextBox Height="23" Margin="0 5 0 0" Padding="2"/>
+            <TextBox x:Name="LengthText" Height="23" Margin="0 5 0 0" Padding="2"/>
 
             <TextBlock Text="Mass" Margin="0 5 0 0" />
-            <TextBox Height="23" IsReadOnly="True" Background="#eeeeee" Padding="2"/>
+            <TextBox x:Name="MassText" Height="23" IsReadOnly="True" Background="#eeeeee" Padding="2"/>
 
             <TextBlock Text="Finish" Margin="0 5 0 0" />
             <ComboBox x:Name="FinishCombox" SelectedIndex="0" Padding="2" Height="23"
@@ -92,7 +92,8 @@
             <TextBlock Text="Supplier Name" Margin="0 5 0 0" />
             <TextBox Height="23" Margin="0 5 0 0" Padding="2"/>
             <TextBlock Text="Supplier Code" Margin="0 5 0 0" />
-            <TextBox x:Name="CodeText" Height="23" Margin="0 5 0 0" Padding="2" />
+            <TextBox x:Name="CodeText" TextChanged="CodeText_TextChanged"
+                     Height="23" Margin="0 5 0 0" Padding="2" />
 
             <TextBlock Text="Additional Information" FontWeight="Bold" Margin="0 5 0 0"/>
             <TextBlock Text="Note" Margin="0 5 0 0" />

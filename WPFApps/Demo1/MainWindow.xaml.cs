@@ -49,5 +49,26 @@ namespace Demo1
             // 初始化完成同步信息
             FinishCombox_SelectionChanged(FinishCombox, null);
         }
+
+        private void CodeText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            MassText.Text = CodeText.Text;
+        }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            LengthText.Text += ((CheckBox)sender).Content;
+        }
+
+        private void RestButton_Click(object sender, RoutedEventArgs e)
+        {
+            WildCheckBox.IsChecked = AssemblyCheckBox.IsChecked = PlasmaCheckBox.IsChecked =
+                LaserCheckBox.IsChecked = PurchaseCheckBox.IsChecked = LatheCheckBox.IsChecked =
+                DrillCheckBox.IsChecked = DrillCheckBox.IsChecked = FoldCheckBox.IsChecked =
+                RowCheckBox.IsChecked = SawCheckBox.IsChecked = false;
+
+            LengthText.Text = string.Empty;
+
+        }
     }
 }
