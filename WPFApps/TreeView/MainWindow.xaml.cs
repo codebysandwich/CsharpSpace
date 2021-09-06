@@ -46,18 +46,26 @@ namespace TreeView
             //MessageBox.Show("open");
             var item = (TreeViewItem)sender;
 
-            //if (item.Items.Count != 1 || item.Items[0] != null)
-            //    return;
+            if (item.Items.Count != 1 || item.Items[0] != null)
+                //if (item.Items.Count > 1)
+                return;
 
             item.Items.Clear();
 
             string path = item.Tag.ToString();
 
             var directories = new List<string>();
-
-            var dirs = Directory.GetDirectories(path);
-            if (dirs.Length > 0)
-                directories.AddRange(dirs);
+            try
+            {
+                var dirs = Directory.GetDirectories(path);
+                if (dirs.Length > 0)
+                    directories.AddRange(dirs);
+            }
+            catch (UnauthorizedAccessException)
+            {
+                MessageBox.Show("无访问权限!");
+                return;
+            }
 
             directories.ForEach(directoryPath =>
             {
@@ -68,8 +76,29 @@ namespace TreeView
                 };
 
                 item.Items.Add(subItem);
+                //if ( (Directory.GetFiles(directoryPath).Length +
+                //        Directory.GetDirectories(directoryPath).Length) > 0)
+                //{
+                //    subItem.Items.Add(null);
+                //}
                 subItem.Items.Add(null);
                 subItem.Expanded += FolderExpaned;
+            });
+
+
+            var files = new List<string>();
+            var fs = Directory.GetFiles(path);
+            if (fs.Length > 0)
+                files.AddRange(fs);
+
+            files.ForEach(filePath =>
+            {
+                var subItem = new TreeViewItem()
+                {
+                    Header = System.IO.Path.GetFileName(filePath),
+                    Tag = filePath
+                };
+                item.Items.Add(subItem);
             });
         }
     }
