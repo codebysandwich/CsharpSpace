@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Params", "Params\Params.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverLoad", "OverLoad\OverLoad.csproj", "{F319FCC2-DBD7-455D-97C3-177077F07057}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyChess", "FlyChess\FlyChess.csproj", "{315A7698-6C74-4738-A5B7-1A9FC02FC798}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{F319FCC2-DBD7-455D-97C3-177077F07057}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F319FCC2-DBD7-455D-97C3-177077F07057}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F319FCC2-DBD7-455D-97C3-177077F07057}.Release|Any CPU.Build.0 = Release|Any CPU
+		{315A7698-6C74-4738-A5B7-1A9FC02FC798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{315A7698-6C74-4738-A5B7-1A9FC02FC798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{315A7698-6C74-4738-A5B7-1A9FC02FC798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{315A7698-6C74-4738-A5B7-1A9FC02FC798}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
