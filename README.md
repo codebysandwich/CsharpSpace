@@ -31,3 +31,5 @@ dotnet publish -c Release -r win10-x64
 ## C#工作中的项目区间
 
 ## tips
+
+MacOS dotnet环境配置版本`V5.0.302`
