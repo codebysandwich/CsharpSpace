@@ -1,7 +1,39 @@
 ﻿using System;
 
+/// <summary>
+/// Color枚举
+/// </summary>
+public enum Color
+{
+    White,
+    Black,
+    Green,
+    Red,
+    Blue
+}
+/// <summary>
+/// Dimesions结构
+/// </summary>
+public struct Dimesions
+{
+    public double Length;
+    public double Width;
+    public Dimesions(double length, double width)
+    {
+        Length = length;
+        Width = width;
+    }
+    public double Diagonal => Math.Sqrt(Length*Length + Width*Width);
+    public override string ToString()
+    {
+        return $"length={Length}, width={Width}, diagonal={this.Diagonal}";
+    }
+}
 namespace Foundation
 {
+    /// <summary>
+    /// 主程序入口
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
@@ -21,6 +53,12 @@ namespace Foundation
 
             Car car = new Car("Proton Persona");
             Console.WriteLine(car);
+
+            Console.WriteLine($"UserPreference BackColor is: {UserPreferences.BackColor}");
+
+            //
+            var point = new Dimesions();
+            Console.WriteLine(point);
         }
     }
 
@@ -99,6 +137,24 @@ namespace Foundation
         public override string ToString()
         {
             return $"Car description:{_description}, nWheels:{_nWheels}";
+        }
+    }
+
+    public static class UserPreferences
+    {
+        public static Color BackColor { get; }
+        static UserPreferences()
+        {
+            DateTime now = DateTime.Now;
+            if (now.DayOfWeek == DayOfWeek.Saturday
+                || now.DayOfWeek == DayOfWeek.Sunday)
+            {
+                BackColor = Color.Green;
+            }
+            else
+            {
+                BackColor = Color.Red;
+            }
         }
     }
 }
